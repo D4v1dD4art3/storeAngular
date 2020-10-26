@@ -1,0 +1,15 @@
+<!-- class#18 pipes | uppercase | currency | slice: 0:10 | date -->
+
+<h3 appHighlight [backgroundColor]="'black'" [color]="'white'">
+  {{ product.title | uppercase }}
+</h3>
+<div class="product__container-img">
+  <img [src]="product.image" [alt]="product.title" />
+</div>
+<span>{{ product.price | currency }}</span>
+<span>{{ product.description | slice: 0:10 }}</span>
+<p>{{ today | date: "E MMM d, y, h:mm aaa" }}</p>
+<button (click)="addCart()" mat-button color="primary">
+  Add to cart <fa-icon [icon]="faShoppingCart"></fa-icon>
+</button>
+<a [routerLink]="['/products', product.id]">See details</a>

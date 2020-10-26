@@ -1,0 +1,47 @@
+<!-- 2 way-data-biding -->
+<input
+  type="text"
+  [(ngModel)]="title"
+  placeholder="Please enter your firstName"
+/>
+
+<input type="text" [(ngModel)]="power" placeholder="Type the base here" />
+<input type="text" [(ngModel)]="exp" placeholder="Type the exponent here" />
+
+<div *ngIf="power && exp !== 0; then thenBlock; else Block"></div>
+<ng-template #thenBlock>{{ power | exponential: exp }}</ng-template>
+<ng-template #Block>Please try your exponent</ng-template>
+
+<app-cart></app-cart>
+
+<!-- condicionales dentro de angular -->
+<div *ngIf="showElement as value; else elseBlock">
+  Content to render when condition is {{ value }}.
+</div>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>
+
+<!-- ngSwitch -->
+
+<!-- <div *ngIf="title === 'Mathias'">This is Mathias</div>
+
+<div *ngIf="title === 'Samuel'">This is Samuel</div>
+
+<div *ngIf="title === 'David'">This is David</div> -->
+
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'Mathias'">This is Mathias</p>
+  <p *ngSwitchCase="'Samuel'">This is Samuel</p>
+  <p *ngSwitchCase="'David'">This is David</p>
+  <p *ngSwitchDefault>Unknown person</p>
+</div>
+
+<!-- *ngFor  -->
+<button (click)="addItems(title)">Add firstName</button>
+
+<ul>
+  <li *ngIf="items.length === 0">This list is empty</li>
+  <li *ngFor="let name of items; index as i">
+    {{ name }} {{ i }}
+    <button (click)="deleteItem(i)">Delete</button>
+  </li>
+</ul>

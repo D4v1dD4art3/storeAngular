@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(4, 8, 53);
+  color: white;
+}
+.product-grid {
+  max-width: 1000px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5px;
+}
+@media (min-width: 576px) {
+  .product-grid {
+    max-width: 500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .product-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+// @media (min-width: 908px) {
+//   .product-grid {
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//   }
+// }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
