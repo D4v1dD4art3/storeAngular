@@ -5,7 +5,6 @@ import {ProductsComponent} from "./components/products/products.component";
 import {ProductRoutingModule} from "./products-routing.module";
 import {ProductDetailComponent} from "./components/product-detail/product-detail.component";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
-// import {faCoffee, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import {SharedModule} from "../shared/shared.module";
 import {MaterialModule} from "../material/material.module";
 import {from} from "rxjs";

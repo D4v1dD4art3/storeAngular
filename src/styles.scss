@@ -1,8 +1,6 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(4, 8, 53);
-  color: white;
+.container {
+  max-width: 1100px;
+  margin-top: 20px;
 }
 .product-grid {
   max-width: 1000px;
@@ -34,5 +32,13 @@ body {
 //   }
 // }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: rgb(4, 8, 53);
+  color: white;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

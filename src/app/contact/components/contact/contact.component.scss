@@ -1,0 +1,108 @@
+.container__navbar {
+  max-width: 1100px;
+  margin: 50px auto 0;
+  .container__navbar-contact {
+    display: flex;
+    height: 35px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0, 255, 213);
+    & p {
+      margin: 0 8px;
+      color: black;
+    }
+    .nav-search {
+      width: 450px;
+      display: flex;
+      justify-content: space-evenly;
+      & input {
+        width: 220px;
+      }
+      & a {
+        color: black;
+        text-decoration: none;
+        & fa-icon {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}
+.container__banner {
+  background-image: url("../../../../assets/images/banner-2.jpg");
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  & .container__banner-title {
+    color: #837e7e;
+    text-align: center;
+  }
+  & a {
+    font-size: 50px;
+    text-decoration: none;
+    color: #23343e;
+  }
+}
+.container__contact {
+  max-width: 1100px;
+  margin: 30px auto;
+  & .container__contact-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    & h1 {
+      margin: 0;
+    }
+  }
+  & .container__contact-select {
+    display: flex;
+    justify-content: space-around;
+    & .container__contact-cart {
+      width: 200px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      & img {
+        width: 220px;
+        height: 218px;
+      }
+      & p {
+        margin: 10px;
+        text-align: center;
+      }
+      & button {
+        margin-top: 20px;
+        padding: 10px;
+        background: transparent;
+        border-radius: 20px;
+        border: 1px solid #ff5722;
+        color: white;
+      }
+      & button:hover {
+        color: #0e0e0e;
+        transform: scale(1.2);
+        background: #ff5722;
+      }
+    }
+  }
+}
+.container__grid {
+  margin: 0 auto;
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+  & .container__grid-contact {
+    text-align: center;
+    margin: 0;
+    & h1 {
+      text-align: center;
+    }
+  }
+}

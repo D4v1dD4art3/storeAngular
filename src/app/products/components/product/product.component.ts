@@ -10,7 +10,8 @@ import {
   OnDestroy,
 } from "@angular/core";
 import {faCoffee, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
-import {Product} from "../../../product.model";
+import {Product} from "../../../core/model/product.model";
+import {CartService} from "../../../core/service/cart/cart.service";
 @Component({
   selector: "app-product",
   templateUrl: "./product.component.html",
@@ -23,7 +24,7 @@ export class ProductComponent implements DoCheck, OnInit, OnDestroy {
   faShoppingCart = faShoppingCart;
   // siempre inicializar el valor del @Output
   @Output() productClicked: EventEmitter<any> = new EventEmitter();
-  constructor() {
+  constructor(private cartService: CartService) {
     console.log("1.constructor");
   }
   // ngOnChanges(changes: SimpleChanges) {
@@ -42,6 +43,6 @@ export class ProductComponent implements DoCheck, OnInit, OnDestroy {
   }
   addCart() {
     console.log("add to cart");
-    this.productClicked.emit(this.product.id);
+    this.cartService.addCart(this.product);
   }
 }

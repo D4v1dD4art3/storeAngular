@@ -22,16 +22,13 @@ const routes: Routes = [
         loadChildren: () =>
           import("./products/products.module").then((m) => m.ProductsModule),
       },
-      // {
-      //   path: "products/:id",
-      //   loadChildren: () =>
-      //     import("./product-detail/product-detail.module").then(
-      //       (m) => m.ProductDetailModule
-      //     ),
-      // },
+      {
+        path: "order",
+        loadChildren: () =>
+          import("./order/order.module").then((m) => m.OrderModule),
+      },
       {
         path: "contact",
-        canActivate: [AdminGuard],
         loadChildren: () =>
           import("./contact/contact.module").then((m) => m.ContactModule),
       },
@@ -41,6 +38,16 @@ const routes: Routes = [
           import("./demo/demo.module").then((m) => m.DemoModule),
       },
     ],
+  },
+  {
+    path: "admin",
+    canActivate: [AdminGuard],
+    loadChildren: () =>
+      import("./admin/admin.module").then((m) => m.AdminModule),
+  },
+  {
+    path: "auth",
+    loadChildren: () => import("./auth/auth.module").then((m) => m.AuthModule),
   },
   {
     path: "**",
